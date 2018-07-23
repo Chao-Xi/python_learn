@@ -1,0 +1,258 @@
+1.Intro
+
+String:
+str= ''  ""  """ """
+print(str)
+print(len(str))
+
+print(str[start:end])
+print(str[:end])
+First bracket include the letter, but the second does not include
+print(str.lower())
+print(str.upper())
+print(str.count('e')) // check how many e inside this string
+pint(str.find('x'))  // check x inside the str or not, return true or false
+
+
+// How to deal with Multiple strings
+new_str=str.replace('A','B') // replace A with B inside the string
+
+new_str = str1 + ' ' + str2 + ',' + ste3. //concat the strings into one new string
+
+str_format= '{} {}, str3'.format(str1, str2)   =>  str1 str2, str3
+
+{} is for place holder
+
+str_format_new = f '{str1} {str2}, str3'       =>  str1 str2, str3
+
+// How to get str info
+print(dir(str))  // Get all py function about string
+print(helpr(str.upper)). //Get explanation about string
+
+2.Num
+type(num)  <class 'int'> output type of number
+num += 1
+
+abs(num)    => get absoulte value
+round(num)  => get round value
+round(num, dig)  => get dig num of round of number
+
+new_num = int(num)
+print(new_num)
+
+
+3.list and its function
+list = [" ", " ", " ", " " ," "]
+len(list)
+
+list[num]
+list[-num]
+list[num:]
+
+
+Common List methods:
+list.append('new ele')  or  list1.append(list2)
+list.insert(num, 'new ele') or  list1.insert(num, list2)    num: insert position
+list1.extend(list2)
+list.remove('new ele')
+list.index('val')
+
+Common List functios:
+list_popped = list.pop()
+print('pop:', list)
+print('popped:', list_popped)
+
+List sort methods:
+list.reverse()
+list.sort()
+list.sort(reverse=True)
+
+List sort functions:
+new_sorted_list = sorted (list)
+
+print('var' in list)  True or false
+
+Loop the list:
+for var in list:
+	print(var)
+
+for index, var in enumerate(list):
+	print(index, var)
+
+for index, var in enumerate(list, start=num):
+	print(index, var)
+
+join list to str:
+new_str= ','.join(list)   //u use any sign to concat the list
+
+split string to arra:
+new_list=new_str.split(',')
+
+4. Tuples
+Tuples is almost like list, except it's immutable [unchanged]
+tuples=('',''，''，'')
+typles[0]=new_value
+//TypeError: 'tuple' object does not support item assignment
+
+5. Sets
+Sets is another kind of list except the order of set always change 
+set={'', '', '', '', ''}
+
+set1.intersection(set2)   //The same part of set1 and set2, output as set also
+set1.difference(set2)     //The different part from set1 to set2, which means set1 has but set2 doesn't, output as set also
+set1.difference(set2) != set2.difference(set1)
+set1.union(set2)          //concat set1 and set2
+
+6.Empty data type
+empty_list = []   or  empty_list=list()
+empty_tuple = ()  or  empty_tuple=tuple()
+empty_set = set()
+empty_dict = {}  or empty_dict = dict()
+
+7.Dict
+dict = {'key':'value', 'key':[]}   //list can be played as value
+print(dict['key'])
+
+//add new pair to the dict
+dict_old['new_key']=new_value
+
+//get dict value by key
+print(dict.get('key_value'))
+
+//update value
+dict_old.update({'old_key':'new_value'})
+
+popped_dict= dict_old.pop('key_value')
+
+//dict methods
+len(dict)
+dict.keys()
+dict.values()
+dict.items()   output key-value pairs
+
+//loop dict
+for key, value in dict.items():
+	print(key, value)
+
+
+8. if elseif
+if A == B:
+	print()
+elif A == C:
+	print()
+else:
+	print()
+
+#and or not
+if user == 'Admin' and password == 'Password' or ...:
+	print()
+else:
+	print()
+
+9. Loop
+//for ... in list:  
+//    if:
+//		continue		
+for ls in list:
+	if ls == 'Value':
+		print('Found This Value')
+		continue
+	print(ls)
+
+//for ... in list:
+//	for ... in list:
+
+for ac in AC_list:
+	for rank in ['good', 'ok', 'bad']:
+		print(ac, rank)
+
+//range(1, 11)
+for i in range(1, 11):
+	print(i)
+
+//do .. while
+x = 0	
+while x < 10:
+	print(x)
+	x += 1
+
+//while ... until ... break
+x = 0
+while True:
+	if x == 5:
+		break
+	print(x)
+	x += 1		
+
+10 funcs
+def func():
+	return ""
+print(func().upper())	
+
+def func(x):
+	return '{}'.format(x)
+
+def func(x, y='a')
+	return '{}{}'.format(x, y)
+
+# * and ** for unpack list or dict
+def func(*list, **dict):
+	print(list)
+	print(dict)
+
+func(list, dict)
+func(*list, dict)
+func(*list, *dict)
+func(*list, **dict)
+
+11 import self defined module
+
+import module1 as m1
+m1.func(x)
+m1.func(y)
+
+from module import m1, m2  
+#import one module as multiple mode
+
+12 python basic modules
+#1. sys
+import sys
+sys.path.append('/A/B/C')
+
+#2. random
+import random
+random_element = random.choice(list)
+for _ in range(10):
+	print(random_element)
+#output 10 times random_element
+
+#3. math
+import math
+rads = math.adians(90)
+
+#4. datetime calendar
+import datetime
+import calendar
+today = datetime.date.today()
+#2018-07-23
+print(calendar.isleap(2016))
+#True
+
+#5. os 
+import os 
+print(os.getcwd()). 
+#  current working directory of a process
+print(os.__file__)
+#  output os lcoation
+
+#6. import antigravity
+open a web
+
+
+
+
+
+
+
+
+

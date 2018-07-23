@@ -1,0 +1,39 @@
+1.check python version
+python --version    => 	 Python 2.7.10
+python3 --version   =>   Python 3.6.4
+
+but if you want use python as python3
+alter .barhrc or .bash_profile
+add  [ alias python=python3 ]
+
+
+2.sublime run python directly
+  1. Tools => Build
+  2. install package : predawn
+                       Material Theme
+
+3.Set sublime build python tool as python3
+ 
+1) Go to Sublime Text to: Tools -> Build System -> New Build System 
+and put the next lines:
+
+{
+    "cmd": ["python3", "-i", "-u", "$file"],
+    "file_regex": "^[ ]File \"(...?)\", line ([0-9]*)",
+    "selector": "source.python"
+}
+
+Then save it with a meaningful name like: python3.sublime-build
+
+2) Go to Tools -> Build system -> and check python3 
+
+test it with:
+
+import sys
+print(sys.version)
+
+Press: Ctrl + b
+
+3) change python system location
+vim .bash_profile
+export PYTHONPATH = ''
